@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bruce&#x27;s privacy policy: on-device workout records, optional iCloud and Apple Health sync, reminders, plan sharing, exports, and contact.">
+  <title>Privacy policy | Bruce</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">Bruce</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+    </nav>
+  </header>
+  <main id="main">
+    <h1>Bruce Privacy Policy</h1>
+    <p class="updated">Last updated: September 17, 2026</p>
+    <h2>Summary</h2>
+    <p>Bruce stores your workout records on your device. The developer does not automatically receive your workout history, Apple Health records, photo files, or saved gym coordinate. Bruce has no advertising or cross-app tracking. Some features make network requests, as described below, and you can choose to share information with other people or services.</p>
+    <h2>Data on your device</h2>
+    <p>Bruce stores plans, workout history, sets, weights, hold durations, notes, tags, body-weight and calorie entries, exercise preferences, and custom exercises in the app&#x27;s storage. Progress photos and custom-exercise images are separate local files. App preferences and an in-progress workout recovery snapshot are also stored locally.</p>
+    <p>Your next-workout choice, plan rotation, and completion identifiers are stored in local app preferences and are not synced through Bruce&#x27;s iCloud settings channel. Completion identifiers prevent a repeated save callback from advancing the rotation twice. Recent workout dates are stored locally to suppress same-day reminders. These identifiers and dates are not analytics parameters.</p>
+    <p>Bruce shares a small local snapshot with its own widgets through an Apple App Group. This includes workout-day and calorie summaries, goals, and pending shortcut actions. Live Activities display workout names, exercise information, and timer state on system surfaces such as the Lock Screen. These features do not send that information to a developer-operated server. You control widget and Lock Screen visibility through iOS.</p>
+    <h2>iCloud</h2>
+    <p>Sync with iCloud is off when this device has no saved choice. Existing stored on/off values are preserved; some earlier versions enabled sync by default. Review Settings &gt; iCloud Sync to see your current choice.</p>
+    <p>When enabled, Bruce uses your private Apple CloudKit database for plans, workout records, body-weight and calorie entries, and exercise-library records, including notes and preferences stored on those records. Apple operates that service. The developer does not have access to your private CloudKit database.</p>
+    <p>The workout database connects to CloudKit when Bruce launches. After changing the switch, fully close and reopen Bruce for the database change to take effect. A previously connected database can continue syncing until then. Turning sync off does not delete data already in iCloud. Reinstalling starts with sync off unless a saved setting is restored; you may need to enable it again to retrieve your existing iCloud records.</p>
+    <p>Photo filenames or image references can be part of synced records, but the progress-photo and custom-exercise image files do not sync through CloudKit. App settings stay on this device in this build; iCloud key-value settings sync is not enabled. Privacy choices, the gym coordinate, and local reminder schedules are device-specific.</p>
+    <p>iOS device backups and iCloud Photos are separate Apple features. Depending on your Apple settings, a device backup can contain Bruce&#x27;s local data, and a copy saved to Photos can sync through iCloud Photos. Bruce&#x27;s iCloud switch does not control those features or Apple Health&#x27;s own sync settings.</p>
+    <h2>Apple Health</h2>
+    <p>Apple Health integration is off by default. If you enable it and grant permission, Bruce can write completed active workouts, estimated active energy burned, and body-weight entries to HealthKit. With read permission, Bruce can read your most recent body-weight sample and offer to import it. Bruce does not read your other HealthKit data types.</p>
+    <p>An imported entry becomes a Bruce record and follows your Bruce storage and iCloud choices. Turning Health integration off stops Bruce&#x27;s sync but does not remove existing Health data. Manage permissions and copies already saved in Apple&#x27;s Health app or iOS Settings. The developer does not receive these HealthKit records.</p>
+    <p>History edits, past-workout entries, and deletions affect Bruce&#x27;s records, including their private iCloud sync when enabled. They do not create, update, or delete workouts in Apple Health. Manage any Health copy separately in the Health app.</p>
+    <h2>Camera and photos</h2>
+    <p>Bruce uses the camera when you choose to take a photo. You can also choose images through the system photo picker. The app keeps its own local image files. With permission, it can save an additional copy to your Photos library. Removing a photo from Bruce does not remove the separate Photos copy, device backups, or copies you shared. Bruce does not upload your photo files to a developer-operated server.</p>
+    <h2>Gym arrival reminders</h2>
+    <p>Gym reminders are off by default. If you enable them and set your gym, Bruce stores the coordinate on this device. iOS monitors a region around that coordinate to trigger a local arrival reminder; background arrival detection needs Always location permission. Bruce does not keep a location trail, send the coordinate to the developer, or sync it through its iCloud settings channel.</p>
+    <p>Turning the reminder off stops region monitoring but keeps the saved coordinate. Use Remove gym location to delete it, including while the reminder is off. You can also revoke location access in iOS Settings.</p>
+    <h2>Notifications and audio</h2>
+    <p>Timer alerts and workout reminders are local notifications, subject to your iOS notification permission. iCloud record updates may use Apple&#x27;s background push infrastructure. Bruce has no developer-operated notification service for workout reminders. Timer sounds and silent background playback help active timers continue; Bruce does not record microphone audio.</p>
+    <p>Enabled workout, plan-tomorrow, and weekly-summary reminders use one-time notifications in a 14-day window. Opening or returning to Bruce, changing reminder settings, or completing a workout refreshes the window. Today&#x27;s workout and plan-tomorrow nudges are skipped after a workout is recorded today; an enabled weekly summary keeps its Sunday schedule within that window. If you stop using Bruce, the scheduled reminders expire with the window.</p>
+    <h2>Remote exercise images and external links</h2>
+    <p>Exercise screens can load remote images as you browse. The bundled exercise catalog references images hosted at raw.githubusercontent.com, and exercise records may reference other image hosts. The host receives the requested URL, your IP address, and ordinary network request metadata, and may retain server logs under its own policies. An image URL can identify which exercise image was requested. These requests do not include your workout history, HealthKit data, or saved gym coordinate.</p>
+    <p>Turning off iCloud or analytics does not turn off remote images. Video, attribution, and App Store links open other apps or websites when selected. Those services receive ordinary network requests and handle any information you choose to provide under their own policies.</p>
+    <h2>Plan sharing</h2>
+    <p>A plan-sharing link contains a reversibly encoded copy of the plan, not an encrypted secret. It can include the plan name, description, folder, exercise names, set and rep targets, weights, rest times, timed-hold targets, and superset/set-type information. Anyone with the link can decode it. Deleting or editing the original plan does not revoke existing links or remove recipients&#x27; copies.</p>
+    <p>Bruce generates the link on device. Opening an HTTPS link, or a messaging service fetching its preview, can send the entire link to bruce-link.ironparadise.workers.dev, a Cloudflare-hosted landing page. That page decodes the plan to display it. There is no app-managed server-side plan library. Cloudflare and services handling the link may process or retain request metadata, and recipients, browsers, or messaging services may retain the link and its contents. A Universal Link opened directly in Bruce can be decoded locally; this does not prevent a messaging service from having fetched a preview.</p>
+    <p>Share only plan contents you intend recipients and link-handling services to receive. Plan links do not automatically include your workout history, body-weight history, photo files, or gym coordinate.</p>
+    <h2>Exports</h2>
+    <p>Export Data creates a JSON file containing plans, workout history, body-weight and calorie entries, and custom exercises, including their stored text. Photo image files are excluded. The system share sheet lets you choose where to send or save the file. The selected app or destination receives that copy; Bruce cannot delete copies retained there.</p>
+    <p>Bruce attempts to remove its staged export after the share activity finishes or cancels. Abandoned exports older than 24 hours are eligible for cleanup when Settings is opened or another export is created; cleanup is not a background deletion guarantee. Temporary export files are local app files, not a public download service.</p>
+    <h2>Usage analytics</h2>
+    <p>Allow usage analytics is off by default and stored only on this device. This build has no active analytics provider and sends no analytics events, even if you turn the switch on. Turning it on records your local choice only.</p>
+    <p>The analytics interface accepts fixed event names, timer modes, tab names, tracking-switch choices, next-workout action labels (selection or completion outcome), weekly goals of 1 to 7 days, and coarse workout-duration/exercise-count ranges. It rejects unapproved parameters and does not accept plan or workout identifiers, free-text plan names, notes, tags, health measurements, photos, coordinates, or personal identifiers. Events attempted while consent is off are dropped, not saved for later transmission. An analytics integration would require an updated disclosure before activation. This build has no AI plan-generation service.</p>
+    <h2>Retention and deletion</h2>
+    <p>You can delete records within Bruce. With database sync enabled, record deletions can also sync to your private CloudKit database. Turning sync off is not a deletion request. Manage existing iCloud data in your Apple account&#x27;s iCloud storage settings.</p>
+    <p>Deleting Bruce, rather than offloading it, removes its normal local app storage. Copies in iCloud, device backups, Apple Health, Photos, exports, or recipients&#x27; apps are separate and may remain until you remove them there. The developer cannot remotely access or erase your private on-device or Apple-account records.</p>
+    <h2>Policy and contact</h2>
+    <p>This policy is included with the app and available offline at Settings &gt; About &gt; Privacy Policy. App updates can include a revised policy. Questions or deletion requests about information you voluntarily send to the developer can be sent to <a href="mailto:aagrawal207@gmail.com">aagrawal207@gmail.com</a>. An email contact shares the address and message you choose to send.</p>
+  </main>
+  <footer class="site-footer">
+    <p>Bruce · <a href="support.html">Support</a> · <a href="privacy.html">Privacy policy</a></p>
+  </footer>
+</body>
+</html>
