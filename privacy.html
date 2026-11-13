@@ -19,7 +19,7 @@
   </header>
   <main id="main">
     <h1>Bruce Privacy Policy</h1>
-    <p class="updated">Last updated: September 17, 2026</p>
+    <p class="updated">Last updated: November 13, 2026</p>
     <h2>Summary</h2>
     <p>Bruce stores your workout records on your device. The developer does not automatically receive your workout history, Apple Health records, photo files, or saved gym coordinate. Bruce has no advertising or cross-app tracking. Some features make network requests, as described below, and you can choose to share information with other people or services.</p>
     <h2>Data on your device</h2>
@@ -51,9 +51,10 @@
     <p>A plan-sharing link contains a reversibly encoded copy of the plan, not an encrypted secret. It can include the plan name, description, folder, exercise names, set and rep targets, weights, rest times, timed-hold targets, and superset/set-type information. Anyone with the link can decode it. Deleting or editing the original plan does not revoke existing links or remove recipients&#x27; copies.</p>
     <p>Bruce generates the link on device. Opening an HTTPS link, or a messaging service fetching its preview, can send the entire link to bruce-link.ironparadise.workers.dev, a Cloudflare-hosted landing page. That page decodes the plan to display it. There is no app-managed server-side plan library. Cloudflare and services handling the link may process or retain request metadata, and recipients, browsers, or messaging services may retain the link and its contents. A Universal Link opened directly in Bruce can be decoded locally; this does not prevent a messaging service from having fetched a preview.</p>
     <p>Share only plan contents you intend recipients and link-handling services to receive. Plan links do not automatically include your workout history, body-weight history, photo files, or gym coordinate.</p>
-    <h2>Exports</h2>
+    <h2>Exports and imports</h2>
     <p>Export Data creates a JSON file containing plans, workout history, body-weight and calorie entries, and custom exercises, including their stored text. Photo image files are excluded. The system share sheet lets you choose where to send or save the file. The selected app or destination receives that copy; Bruce cannot delete copies retained there.</p>
     <p>Bruce attempts to remove its staged export after the share activity finishes or cancels. Abandoned exports older than 24 hours are eligible for cleanup when Settings is opened or another export is created; cleanup is not a background deletion guarantee. Temporary export files are local app files, not a public download service.</p>
+    <p>Import Data reads a Bruce export file that you choose in the system file picker. Bruce shows how many records the file would add and adds them only after you confirm. It adds records that are not in the app yet. It does not change or delete your existing records, and it does not send the file anywhere. Imported records follow your Bruce storage and iCloud choices.</p>
     <h2>Usage analytics</h2>
     <p>Allow usage analytics is off by default and stored only on this device. This build has no active analytics provider and sends no analytics events, even if you turn the switch on. Turning it on records your local choice only.</p>
     <p>The analytics interface accepts fixed event names, timer modes, tab names, tracking-switch choices, next-workout action labels (selection or completion outcome), weekly goals of 1 to 7 days, and coarse workout-duration/exercise-count ranges. It rejects unapproved parameters and does not accept plan or workout identifiers, free-text plan names, notes, tags, health measurements, photos, coordinates, or personal identifiers. Events attempted while consent is off are dropped, not saved for later transmission. An analytics integration would require an updated disclosure before activation. This build has no AI plan-generation service.</p>
@@ -61,7 +62,8 @@
     <p>You can delete records within Bruce. With database sync enabled, record deletions can also sync to your private CloudKit database. Turning sync off is not a deletion request. Manage existing iCloud data in your Apple account&#x27;s iCloud storage settings.</p>
     <p>Deleting Bruce, rather than offloading it, removes its normal local app storage. Copies in iCloud, device backups, Apple Health, Photos, exports, or recipients&#x27; apps are separate and may remain until you remove them there. The developer cannot remotely access or erase your private on-device or Apple-account records.</p>
     <h2>Policy and contact</h2>
-    <p>This policy is included with the app and available offline at Settings &gt; About &gt; Privacy Policy. App updates can include a revised policy. Questions or deletion requests about information you voluntarily send to the developer can be sent to <a href="mailto:aagrawal207@gmail.com">aagrawal207@gmail.com</a>. An email contact shares the address and message you choose to send.</p>
+    <p>This policy is included with the app and available offline at Settings &gt; About &gt; Privacy Policy. App updates can include a revised policy. Questions or deletion requests about information you voluntarily send to the developer can be sent to <a href="mailto:aagrawal207@gmail.com">aagrawal207@gmail.com</a>.</p>
+    <p>Send Feedback in Settings &gt; About opens an email draft in your mail app, addressed to <a href="mailto:aagrawal207@gmail.com">aagrawal207@gmail.com</a>. Bruce fills in the app version and build, the iOS version and the device model, so that a problem can be reproduced. Nothing is sent until you send the email, and you can edit or remove those lines first. If no mail app is set up, Bruce copies the email address to the clipboard. An email contact shares the address and message you choose to send.</p>
   </main>
   <footer class="site-footer">
     <p>Bruce · <a href="support.html">Support</a> · <a href="privacy.html">Privacy policy</a></p>
